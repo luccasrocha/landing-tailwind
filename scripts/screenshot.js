@@ -5,7 +5,9 @@
 const { chromium } = require('playwright');
 
 (async () => {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({
+    executablePath: '/usr/bin/google-chrome',
+  });
   const url = 'file://' + __dirname + '/../index.html';
   const context = await browser.newContext();
   const page = await context.newPage();
