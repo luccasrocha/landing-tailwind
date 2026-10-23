@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vitrine — a página do seu negócio de bairro</title>
   <meta name="description" content="Monte a vitrine da sua loja em uma tarde: horário, produtos e um botão de WhatsApp no mesmo endereço." />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="dist/output.css">
 </head>
 
 <body class="bg-stone-50 font-sans text-emerald-950 antialiased">
@@ -149,8 +149,45 @@
     </section>
   </main>
 
+  <!-- ======================= CONTATO (Netlify Forms) ======================= -->
+  <section id="contato" class="bg-stone-50">
+    <div class="mx-auto max-w-2xl px-6 py-16 md:py-24">
+      <h2 class="text-3xl font-black uppercase leading-none tracking-tight md:text-4xl">Fale com a gente</h2>
+      <p class="mt-4 text-base leading-relaxed text-stone-600 md:text-lg">Tem uma ideia para sua loja? Manda uma mensagem e respondemos em até 1 dia útil.</p>
+
+      <form name="contato" method="POST" data-netlify="true" class="mt-8 space-y-4">
+        <input type="hidden" name="form-name" value="contato" />
+
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <label class="block">
+            <span class="text-sm font-semibold text-stone-700">Nome</span>
+            <input name="nome" type="text" required
+                   class="mt-1 block w-full rounded-md border-2 border-emerald-950 px-4 py-3 text-base text-stone-900 focus:outline-none focus:ring-2 focus:ring-emerald-950 focus:ring-offset-2" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm font-semibold text-stone-700">E-mail</span>
+            <input name="email" type="email" required
+                   class="mt-1 block w-full rounded-md border-2 border-emerald-950 px-4 py-3 text-base text-stone-900 focus:outline-none focus:ring-2 focus:ring-emerald-950 focus:ring-offset-2" />
+          </label>
+        </div>
+
+        <label class="block">
+          <span class="text-sm font-semibold text-stone-700">Mensagem</span>
+          <textarea name="mensagem" rows="4" required
+                    class="mt-1 block w-full rounded-md border-2 border-emerald-950 px-4 py-3 text-base text-stone-900 focus:outline-none focus:ring-2 focus:ring-emerald-950 focus:ring-offset-2"></textarea>
+        </label>
+
+        <button type="submit"
+                class="w-full bg-emerald-950 px-7 py-4 text-center text-base font-semibold text-stone-50 transition hover:bg-amber-400 hover:text-emerald-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-950 focus-visible:ring-offset-2 sm:w-auto">
+          Enviar mensagem
+        </button>
+      </form>
+    </div>
+  </section>
+
   <!-- ======================= FOOTER ======================= -->
-  <footer id="contato" class="border-t-2 border-emerald-950 bg-emerald-950 text-stone-50">
+  <footer class="border-t-2 border-emerald-950 bg-emerald-950 text-stone-50">
     <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 md:flex-row md:items-center md:justify-between">
       <div>
         <p class="text-xl font-black uppercase leading-none tracking-tight">Vitrine</p>
