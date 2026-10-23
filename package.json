@@ -4,6 +4,7 @@
   "description": "Landing page Vitrine — uma landing page para negócios de bairro construída apenas com Tailwind CSS",
   "main": "index.html",
   "scripts": {
+    "build": "tailwindcss -i src/input.css -o dist/output.css --minify",
     "screenshot": "node scripts/screenshot.js"
   },
   "repository": "https://github.com/luccasrocha/landing-tailwind",
@@ -17,6 +18,8 @@
   "license": "ISC",
   "browserslist": ">0.25%, not dead",
   "devDependencies": {
-    "playwright": "^1.64.1"
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^3.4.19"
   }
 }
